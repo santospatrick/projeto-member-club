@@ -21,6 +21,7 @@
     --spacing---xs: 0.25rem;
     --spacing---sm: 0.5rem;
     --spacing---md: 1rem;
+    --radius--lg: 1rem;
     --radius--md: 0.75rem;
     --radius--sm: 0.5rem;
 
@@ -70,8 +71,16 @@ body {
     justify-content: space-between;
 }
 
+.items-center {
+    align-items: center;
+}
+
 .gap-1 {
     gap: 1rem;
+}
+
+.gap-1\.5 {
+    gap: 1.5rem;
 }
 
 .gap-2 {
