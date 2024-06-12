@@ -1,3 +1,5 @@
-import './styles/global.css'
+'use strict';
 
-console.log('nice!')
+import './styles/global.css';
+
+import './modules/page-load.js';
