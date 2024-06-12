@@ -1,5 +1,6 @@
 import { getClientDetails } from "../services/client-details";
 import { mountClientDetails } from "./sections/client-details";
+import { mountHistoryLog } from "./sections/history-log";
 
 const form = document.querySelector('form');
 const input = document.getElementById('id-cartao');
@@ -14,9 +15,10 @@ form.addEventListener('submit', async (event) => {
 
     const clientDetails = await getClientDetails({ id: data['id-cartao'] })
 
-    const { name, clientSince } = clientDetails;
+    const { name, clientSince, appointmentHistory } = clientDetails;
 
     mountClientDetails({ name, clientSince })
+    mountHistoryLog({ appointmentHistory })
 })
 
 input.addEventListener('input', (event) => {
