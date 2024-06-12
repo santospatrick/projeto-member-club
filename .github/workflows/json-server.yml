@@ -26,5 +26,5 @@ jobs:
         echo "Setting up Heroku"
         npm install -g heroku
         heroku auth:token
-        git remote add heroku https://git.heroku.com/my-json-server.git
+        git remote add heroku https://git.heroku.com/member-club-json-server.git
         git push heroku main
