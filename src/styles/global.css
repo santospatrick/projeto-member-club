@@ -44,3 +44,29 @@ body {
     background: var(--base---gray-200);
     font: var(--text-md);
 }
+
+.container {
+    max-width: 936px;
+    padding-inline: 0.75rem;
+    margin-inline: auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.gap-1 {
+    gap: 1rem;
+}
+
+.gap-2 {
+    gap: 2rem;
+}
