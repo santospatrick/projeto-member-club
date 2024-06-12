@@ -8,4 +8,5 @@ import './styles/content.css';
 import './styles/typography.css';
 import './styles/colors.css';
 
+import './modules/form.js';
 import './modules/page-load.js';
