@@ -17,6 +17,13 @@
     --base---gray-600: rgba(74, 68, 72, 1);
     --base---gray-700: rgba(51, 43, 49, 1);
 
+    /* sizes / spacing */
+    --spacing---xs: 0.25rem;
+    --spacing---sm: 0.5rem;
+    --spacing---md: 1rem;
+    --radius--md: 0.75rem;
+    --radius--sm: 0.5rem;
+
     /* Text-size styles */
     --font-family: 'Oxygen', sans-serif;
 
