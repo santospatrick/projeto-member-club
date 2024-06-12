@@ -1,0 +1,30 @@
+name: Deploy JSON Server to Heroku
+
+on:
+  workflow_dispatch:  # This allows the workflow to be run manually
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Deploy to Heroku
+      env:
+        HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+      run: |
+        echo "Setting up Heroku"
+        npm install -g heroku
+        heroku auth:token
+        git remote add heroku https://git.heroku.com/my-json-server.git
+        git push heroku main
