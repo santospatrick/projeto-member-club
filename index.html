@@ -110,20 +110,26 @@
                     </div>
                 </div>
                 <div class="card milestone">
-                    <div class="flex space-between">
-                        <aside class="flex flex-column gap-1">
-                            <div class="flex">
-                                <h3 class="big-number">3</h3>
-                                <span>cortes restantes</span>
+                    <div class="flex space-between gap-1">
+                        <aside class="flex flex-column flex-1 gap-0.75">
+                            <div class="flex gap-0.5 items-baseline">
+                                <h3 class="title-md text-base-gray-600">3</h3>
+                                <span class="text-md text-base-gray-500">cortes restantes</span>
                             </div>
-                            <div class="progress-bar" data-total="7">
-                                <div class="progress"></div>
+                            <div class="progress-container">
+                                <div class="progress-bar">
+                                    <div class="progress" data-total="75%"></div>
+                                </div>
+                                <div class="progress-text text-base-gray-500 text-xs text-nowrap">7 de 10</div>
                             </div>
                         </aside>
-                        <img 
-                            src="./src/assets/PinGift.png" 
-                            alt="Ícone de presente com sombra e colorido em rosa"
-                        />
+                        <!-- tocar para <figure /> -->
+                        <div class="image">
+                            <img 
+                                src="./src/assets/PinGift.png" 
+                                alt="Ícone de presente com sombra e colorido em rosa"
+                            />
+                        </div>
                     </div>
                 </div>
             </main>

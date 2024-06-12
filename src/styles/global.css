@@ -17,6 +17,7 @@
     --base---gray-500: rgba(117, 108, 113, 1);
     --base---gray-600: rgba(74, 68, 72, 1);
     --base---gray-700: rgba(51, 43, 49, 1);
+    --linear-gradient: linear-gradient(90deg, #2DAA6E 0%, #2DAAAA 33%, #856CCF 67%, #D658B3 100%);
 
     /* sizes / spacing */
     --spacing---xs: 0.25rem;
@@ -82,6 +83,14 @@ body {
 
 .items-center {
     align-items: center;
+}
+
+.items-baseline {
+    align-items: baseline;
+}
+
+.flex-1 {
+    flex: 1;
 }
 
 .gap-1 {

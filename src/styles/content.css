@@ -98,3 +98,49 @@
         }
     }
 }
+
+/* Cortes Restantes */
+.milestone {
+    padding-inline: 2rem;
+
+    & .image {
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        background: var(--base---gray-200);
+        width: 72px;
+        height: 72px;
+        overflow: hidden;
+    }
+
+    & img {
+        width: 64px;
+    }
+
+    .progress-container {
+        --bar-height: 8px;
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        & .progress-bar {
+            position: relative;
+            height: var(--bar-height);
+            background: var(--base---gray-300);
+            border-radius: 100px;
+            width: 100%;
+            margin-right: 1rem;
+        }
+
+        & .progress {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            height: var(--bar-height);
+            width: var(--dynamic-width, 100%);
+            background: var(--linear-gradient);
+            border-radius: 100px;
+        }
+    }
+}

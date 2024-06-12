@@ -27,3 +27,7 @@
 .text-xs {
     font: var(--text-xs);
 }
+
+.text-nowrap {
+    white-space: nowrap;
+}
