@@ -8,10 +8,12 @@
 
 .subtitle-md {
     font: var(--subtitle-md);
+    text-transform: uppercase;
 }
 
 .subtitle-sm {
     font: var(--subtitle-sm);
+    text-transform: uppercase;
 }
 
 .text-md {

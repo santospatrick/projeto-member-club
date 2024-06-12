@@ -9,7 +9,7 @@
     height: 100%;
 }
 
-/* Profile */
+/* Perfil */
 .profile .image {
     position: relative;
     display: grid;
@@ -49,10 +49,20 @@
     }
 }
 
-.profile h2 {
-    color: var(--base---gray-600);
+/* Histórico */
+.history header {
+    padding-bottom: var(--spacing---md);
+    border-bottom: 1px solid var(--base---gray-200);
+    margin-bottom: var(--spacing---md);
 }
 
-.profile p {
-    color: var(--base---gray-500);
+.history {
+    & .verified {
+        height: 32px;
+        width: 32px;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        background: var(--main---green-0\.12-opacity);
+    }
 }
