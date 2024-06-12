@@ -20,11 +20,8 @@ jobs:
       run: npm install
 
     - name: Deploy to Heroku
-      env:
-        HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-      run: |
-        echo "Setting up Heroku"
-        npm install -g heroku
-        heroku auth:token
-        git remote add heroku https://git.heroku.com/member-club-json-server.git
-        git push heroku main
+      uses: akhileshns/heroku-deploy@v3.12.12
+      with:
+        heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
+        heroku_app_name: "member-club-json-server"
+        heroku_email: "patrickspteixeira@gmail.com"
