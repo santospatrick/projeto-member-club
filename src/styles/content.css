@@ -1,14 +1,39 @@
 .grid {
     display: grid;
-    grid-template-columns: 320px 1fr;
-    grid-template-rows: 465px;
+    grid-template-areas: 
+        'profile fidelity'
+        'history fidelity'
+        'history milestone';
+    grid-template-columns: 320px 2fr;
 }
 
 @media (max-width: 768px) {
     .grid {
+        grid-template-areas: 
+            'profile'
+            'fidelity'
+            'milestone'
+            'history';
         grid-template-columns: 1fr;
         grid-template-rows: auto;
+        gap: .5rem;
     }
+}
+
+.profile {
+    grid-area: profile;
+}
+
+.history {
+    grid-area: history;
+}
+
+.fidelity {
+    grid-area: fidelity;
+}
+
+.milestone {
+    grid-area: milestone;
 }
 
 .fidelity {
@@ -80,6 +105,10 @@
 .fidelity {
     padding: 2rem;
 
+    @media (max-width: 768px) {
+        padding: 1rem;
+    }
+
     & .tag {
         display: flex;
         align-items: center;
@@ -88,6 +117,18 @@
         border-radius: 100px;
         padding-inline: 0.75rem;
         padding-block: 0.375rem;
+    }
+
+    @media (max-width: 768px) {
+        & .tag {
+            font-size: var(--body---text--xs);
+            text-wrap: nowrap;
+            margin-left: 1rem;
+        }
+
+        & > div:last-child {
+            gap: .5rem;
+        }
     }
 
     & .gray-box {
@@ -104,6 +145,17 @@
 
         &:last-child img:not(.achievement) {
             width: 40px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        & .gray-box {
+            height: 64px;
+            width: 64px;
+
+            img {
+                width: 46px;
+            }
         }
     }
 }
