@@ -2,7 +2,7 @@ const fidelity = document.querySelector('.fidelity');
 
 export function mountFidelityPoints({
     id,
-    appointmentHistoryLength
+    totalCuts
 }) {
     fidelity.querySelector('.tag').innerHTML = '';
 
@@ -12,7 +12,7 @@ export function mountFidelityPoints({
         fidelity.querySelector(`.gray-box:nth-child(${index + 1})`).innerHTML = '';
     }
 
-    for (let index = 0; index < appointmentHistoryLength; index++) {
+    for (let index = 0; index < totalCuts; index++) {
         const iconeVerificado = document.createElement('img');
         iconeVerificado.src = './src/assets/PinCheck.png';
         iconeVerificado.alt = 'Ícone de verificado verde com sombra';

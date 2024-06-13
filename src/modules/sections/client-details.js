@@ -2,7 +2,8 @@ const profile = document.querySelector('.profile');
 
 export function mountClientDetails({
     name,
-    clientSince
+    clientSince,
+    image: userImageURL
 }) {
     // limpar conteudo antes de inserir novo html
     profile.innerHTML = ''
@@ -17,14 +18,14 @@ export function mountClientDetails({
     image.classList.add('image');
     
     const img = document.createElement('img');
-    img.src = 'https://via.placeholder.com/150';
+    img.src = userImageURL;
 
     image.append(img)
 
     /**
      * Estrutura de detalhes do cliente
      * <div class="flex flex-column">
-     *   <h2 class="title-sm text-base-gray-600">Nome do Usuário</h2>
+     *   <h2 class="title-sm text-base-gray-600">Usuário</h2>
      *   <p class="text-xs text-base-gray-500">Cliente desde 18/09/2023</p>
      * </div>
      */

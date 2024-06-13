@@ -2,6 +2,7 @@ import { getClientDetails } from "../services/client-details";
 import { mountClientDetails } from "./sections/client-details";
 import { mountFidelityPoints } from "./sections/fidelity-card";
 import { mountHistoryLog } from "./sections/history-log";
+import { mountMilestone } from "./sections/progress";
 
 const form = document.querySelector('form');
 const input = document.getElementById('id-cartao');
@@ -16,11 +17,13 @@ form.addEventListener('submit', async (event) => {
 
     const clientDetails = await getClientDetails({ id: data['id-cartao'] })
 
-    const { name, clientSince, appointmentHistory } = clientDetails;
+    const { name, clientSince, appointmentHistory, image, loyaltyCard } = clientDetails;
+    const { totalCuts, cutsNeeded, cutsRemaining } = loyaltyCard;
 
-    mountClientDetails({ name, clientSince })
+    mountClientDetails({ name, clientSince, image })
     mountHistoryLog({ appointmentHistory })
-    mountFidelityPoints({ id: data['id-cartao'], appointmentHistoryLength: appointmentHistory.length })
+    mountFidelityPoints({ id: data['id-cartao'], totalCuts })
+    mountMilestone({ totalCuts, cutsNeeded, cutsRemaining })
 })
 
 input.addEventListener('input', (event) => {

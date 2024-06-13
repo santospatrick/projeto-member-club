@@ -6,7 +6,7 @@
     margin-top: 2rem;
     margin-bottom: 4rem;
 
-    & button {
+    & > button {
         position: absolute;
         z-index: 2;
         top: var(--spacing---sm);
@@ -46,5 +46,18 @@
         outline: none;
         border-width: 1.5px;
         border-color: var(--main---pink);
+    }
+}
+
+.suggestion {
+    margin-top: .25rem;
+    display: inline-block;
+
+    button {
+        text-decoration: underline;
+        color: var(--main---pink);
+        border: none;
+        cursor: pointer;
+        background: transparent;
     }
 }
