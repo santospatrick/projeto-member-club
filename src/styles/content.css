@@ -4,6 +4,13 @@
     grid-template-rows: 465px;
 }
 
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+}
+
 .fidelity {
     height: 100%;
 }

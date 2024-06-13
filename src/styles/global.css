@@ -53,6 +53,7 @@
 body {
     background: var(--base---gray-200);
     font: var(--text-md);
+    padding-bottom: 2rem;
 }
 
 .container {
