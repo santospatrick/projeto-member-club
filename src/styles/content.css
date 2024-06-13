@@ -102,7 +102,7 @@
             width: 64px;
         }
 
-        &:last-child img {
+        &:last-child img:not(.achievement) {
             width: 40px;
         }
     }

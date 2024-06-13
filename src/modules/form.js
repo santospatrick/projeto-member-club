@@ -22,8 +22,12 @@ form.addEventListener('submit', async (event) => {
 
     mountClientDetails({ name, clientSince, image })
     mountHistoryLog({ appointmentHistory })
-    mountFidelityPoints({ id: data['id-cartao'], totalCuts })
+    mountFidelityPoints({ id: data['id-cartao'], cutsNeeded, totalCuts })
     mountMilestone({ totalCuts, cutsNeeded, cutsRemaining })
+
+    if (totalCuts >= cutsNeeded) {
+        alert('Parabéns! Você atingiu a quantidade necessária de cortes para ganhar um brinde!')
+    }
 })
 
 input.addEventListener('input', (event) => {
